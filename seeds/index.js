@@ -12,9 +12,6 @@ const seedAll = async () => {
   await seedBlogs();
   console.log("\n==== Blogs Seed =====\n");
 
-  await seedComments();
-  console.log("\n==== Comments Seed ====\n");
-
   process.exit(0);
 };
 
