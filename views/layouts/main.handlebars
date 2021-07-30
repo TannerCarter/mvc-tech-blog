@@ -1,1 +1,54 @@
-<!-- Code Here -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVC Tech Blog</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+  <div class="wrapper shadow-2xl">
+    <header class="bg-gray-300">
+        <h1 class="text-lg h-12 ml-36 font-bold">MVC Tech Blog</h1>
+        <nav class="navbar flex">
+            {{#if loggedIn}}
+            <a href="/" class="navbar-item mr-6"><button class="bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-white font-bold py-2 px-4 rounded-l">Home</button></a>
+            <a href="/dashboard" class="navbar-item mr-6"><button class="bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-white font-bold py-2 px-4 rounded">Dashboard</button></a>
+            <a href="/dashboard/create/" class="navbar-item mr-6"><button class="bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-white font-bold py-2 px-4 rounded">Blogs</button></a>
+            <a><button id="logout" class="button mr-6 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-white font-bold py-2 px-4 rounded-r">Logout</button></a>
+            {{else}}
+            <a href="/" class="navbar-item mr-4 "><button class="bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-white font-bold py-2 px-4 rounded-l">Home</button></a>
+            <a href="/login" class="button mr-4"><button class="bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-white font-bold py-2 px-4 rounded-r">Login</button></a>
+            {{/if}}
+        </nav>
+    </header>
+
+    <main>
+            {{{ body }}}
+    </main>
+
+    <footer class="footer rows text-center">
+        <div class="content text-center">
+            <p>
+            {{#if loggedIn}}
+            
+            &copy; 2021 MVC Tech Blog, Inc.
+            {{else}}
+            &copy; 2021 MVC Tech Blog, Inc.
+            {{/if}}
+            </p>
+        </div>
+      
+  </div>
+    </footer>
+  </div>
+
+{{#if loggedIn}}
+<script src="/js/logout.js"></script>
+{{/if}}
+</body>
+
+</html>

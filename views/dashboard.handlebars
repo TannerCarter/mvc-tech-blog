@@ -1,1 +1,18 @@
-<!-- Code Here -->
+ <div class="text-center">
+        <a href="/dashboard/create/"><button id="create-blog" class="button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create Blog Post</button></a>
+
+        <h2 class="title text-4xl">Dashboard: Your blogs</h2><hr>
+{{#if blogs.length}}
+    </div>
+
+    {{#each blogs as |blog|}}
+        {{> blog-info blog}}
+
+            <a href="/dashboard/edit/{{blog.id}}"><button class="button bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">Edit Blog Post</button></a>
+        </div>
+    {{/each}}
+
+{{else}}
+<h6 class="">You do not have any blog posts</h6>
+
+{{/if}}

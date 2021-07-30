@@ -1,1 +1,32 @@
-<!-- Code Here -->
+<section>
+  <a href="/dashboard" class="right"> &larr; Back To Dashboard</a>
+  <h2 class="title text-center text-4xl">Create a New Blog Post:</h2><hr />
+
+  <form class="new-blog-form text-center mt-48">
+    <div class="text-bold">
+      <label class="text-bold" for="blog-title">Title Your Blog:</label>
+      <input
+        class="input"
+        type="text"
+        id="blog-title"
+        name="blog-title"
+        placeholder="Blog Title"
+      />
+    </div>
+    <div class="text-bold">
+      <label for="blog-content">Blog Content:</label>
+      <input
+        class="textarea is-large"
+        id="blog-content"
+        name="blog-content"
+        placeholder="Blog content here"
+      />
+    </div>
+    <a><button
+        type="submit"
+        class="button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >Post Blog</button></a>
+  </form>
+</section>
+
+<script src="/js/add-blog.js"></script>

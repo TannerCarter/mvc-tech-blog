@@ -89,8 +89,6 @@ router.post("/login", (req, res) => {
       // declare session variables
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
-      req.session.twitter = dbUserData.twitter;
-      req.session.github = dbUserData.github;
       req.session.loggedIn = true;
 
       res.json({ user: dbUserData, message: "You are now logged in!" });

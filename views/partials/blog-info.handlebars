@@ -1,1 +1,25 @@
-<!-- Code Here -->
+<h2 class="title text-4xl text-center">{{title}}:</h2>
+<h2 href="/blog/{{id}}"  class="text-center"> </h2>
+<div class="card text-center">
+  <header class="card-header card-header-title text-center">
+    
+        <div class="column text-center">
+            <p class="text-center"></p>
+      </p>
+      </div>
+
+      <div class="column">
+      <span class=""> </span>
+      </div>
+    
+  </header>
+
+    <div class="card-content mt-48">
+        <div class="content">
+            {{blog_content}}
+        </div>
+            <div class="">
+                <a href="/blog/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> | <b>{{user.username}}</b> | {{format_date created_at}}
+            </div>
+        
+    </div>
